@@ -1,0 +1,23 @@
+{
+  "name": "downloader GCP",
+  "description": "The script for downloading video from the site https://www.thegreatcoursesplus.com",
+  "dependencies": {
+    "cheerio": "latest",
+    "tinyreq": "latest",
+    "curlrequest": "latest",
+    "esprima": "latest",
+    "https": "latest",
+    "fs": "latest",
+    "http": "latest"
+  },
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atako/GreatCoursesPlusVideoDownloader.git"
+  },
+  "keywords": [],
+  "author": "Dmitry Ryumkin",
+  "license": "ISC",
+  "homepage": "https://github.com/atako/GreatCoursesPlusVideoDownloader"
+}

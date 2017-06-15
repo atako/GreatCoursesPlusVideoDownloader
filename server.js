@@ -4,9 +4,9 @@ const cheerio = require("cheerio"),
       esprima = require('esprima'),
       https = require('https'),
       fs = require('fs'),
-      http = require('http')
+      http = require('http'),
+      config = require('./config')
 
-const cookie = //' paste here your userid=id ';
 
 const formatNumber = (digit) => {
     return digit < 9 ? '0' + (digit + 1).toString() : (digit + 1).toString();
@@ -30,7 +30,7 @@ const launcher = (comments) => {
 
 const getLinkToVideo = (id, number, name) => {
     const requestOptions = { url: `https://www.thegreatcoursesplus.com/embed/player?filmId=${id}`,
-                             headers: { Cookie: `${cookie}`}};
+                             headers: { Cookie: `${config.user_id}`}};
     curl.request(requestOptions, (err, stdout, meta) => {
         const parsedHTML = cheerio.load(stdout);
         const script1 = parsedHTML('script')[6].children[0].data;
@@ -58,5 +58,5 @@ const downloadVideo = (link, number, name) => {
 }
 
 
-loadListOfVideo("https://www.thegreatcoursesplus.com/yoga-for-a-healthy-mind-and-body");
+loadListOfVideo(config.course_url);
 

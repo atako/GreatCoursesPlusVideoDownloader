@@ -1,16 +1,24 @@
+
 {
-  "name"         : "node-web-scrape",
-  "version"      : "0.0.1",
-  "description"  : "Scrape le web.",
-  "main"         : "server.js",
-  "author"       : "Scotch",
-  "dependencies" : {
-    "express"    : "latest",
-    "request"    : "latest",
-    "cheerio"    : "latest",
-    "tinyreq"    : "latest",
-    "cheerio-req" : "latest",
-    "curlrequest"    : "latest",
-    "esprima"  : "latest"
-  }
+  "name": "downloader GCP",
+  "description": "The script for downloading video from the site https://www.thegreatcoursesplus.com",
+  "dependencies": {
+    "cheerio": "latest",
+    "tinyreq": "latest",
+    "curlrequest": "latest",
+    "esprima": "latest",
+    "https": "latest",
+    "fs": "latest",
+    "http": "latest"
+  },
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atako/GreatCoursesPlusVideoDownloader.git"
+  },
+  "keywords": [],
+  "author": "Dmitry Ryumkin",
+  "license": "ISC",
+  "homepage": "https://github.com/atako/GreatCoursesPlusVideoDownloader"
 }
